@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Practice</title>
+        <meta name="description" content="practicing">
+        <meta name="keywords" content="html tutorial template">
+
+    </head>
+    <body>
+        <p id="demo"></p>
+    </body>
+
+    <script>
+        var text = '{ "employees": [' +
+        '{ "firstName": "John", "lastName": "Doe" },' +
+        '{ "firstName": "Anna", "lastName": "Smith" },' +
+        '{ "firstName": "Peter", "lastName": "Jones" } ]}';
+
+        var obj = JSON.parse(text);
+        
+        document.getElementById("demo").innerHTML = 
+        obj.employees[1].firstName + " " + obj.employees[1].lastName;
+    </script>
+</html>
