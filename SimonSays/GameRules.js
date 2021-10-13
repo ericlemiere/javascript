@@ -11,14 +11,13 @@ $(document).ready(function() {
             $(".centeredDiv").animate({ 
                 height: "+=500px",
                 width: "+=500px"
-             });
-             $("#colors li").animate({
+            });
+            $("#colors li").animate({
                 height: "+=250px",
                 width: "+=250px"
             });
-            startClick++;
         }
-        
+        startClick++;
     });
 });
 
@@ -99,10 +98,7 @@ $(function() {
     });
 
     var init = function() {
-        $('#level').text('Level ' + level).animate({
-            fontSize: "40px",
-
-        }).css({"color": "black"});
+        $('#level').hide().fadeIn(800).text('Level ' + level).css({"color": "black"});
         flashNo = 0;
         clickedNo = 0;
         $(this).text('Simon Says...');
