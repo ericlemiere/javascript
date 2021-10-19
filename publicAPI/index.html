@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content = "text/html; charset = ISO-8859-1" http-equiv="content-type">
+    <title>API Call</title>
+    <script type="application/javascript">
+    
+        function loadJSON() {
+            var data_file = "https://catfact.ninja/fact";
+            var httpReq = new XMLHttpRequest();
+            httpReq.open("GET", data_file, true);
+            httpReq.responseType = "text";
+            httpReq.send();
+            httpReq.onreadystatechange = function() {
+                if (httpReq.readyState == 4) {
+                    var jsonObj = JSON.parse(httpReq.responseText);
+                    document.getElementById("content").innerHTML = "&#128571;" + jsonObj.fact;
+                    console.log(jsonObj);
+                }
+            }
+        }
+    
+    </script>
+
+
+</head>
+<body>
+    <h1>Random Cat Facts</h1>
+    <p id="content">&#128571;</p>
+    <button type="button" onclick="loadJSON()">Click for a Random Cat Fact</button>
+</body>
+
+</html>

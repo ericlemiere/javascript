@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <div id="changeText">
+        <p>I would like to change this text.</p>
+        <button type="button" onclick="changeText()">Change Text</button>
+    </div>
+
+    <div id="json">
+        <p>Change text using JSON object</p>
+        <button type="button" onclick="changeWithJson()">Change Text</button>
+    </div>
+
+<script>
+
+function changeText() {
+
+    const x = new XMLHttpRequest();
+    x.onload = function() {
+        document.getElementById("changeText").innerHTML = this.responseText;
+    }
+    x.open("GET", "XMLHttpRequest.txt");
+    x.send();
+}
+
+
+const carArray = {
+        "make": "Honda", 
+        "model": "Civic",
+        "year": 1979,
+        "color": "blue"
+}
+
+function changeWithJson() {
+    
+    const x = new XMLHttpRequest();
+    x.onload = function() {
+        document.getElementById("json").innerHTML = carArray.year + " " +  carArray.make + " " + carArray.model;
+    }
+    x.open("GET", "");
+    x.send();
+}
+
+</script>
+
+</body>
+</html>
