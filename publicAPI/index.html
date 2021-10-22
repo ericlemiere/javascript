@@ -5,14 +5,17 @@
     <title>API Call</title>
     <script type="application/javascript">
     
-        function loadJSON() {
+        function loadJSON() 
+        {
             var data_file = "https://catfact.ninja/fact";
             var httpReq = new XMLHttpRequest();
             httpReq.open("GET", data_file, true);
             httpReq.responseType = "text";
             httpReq.send();
-            httpReq.onreadystatechange = function() {
-                if (httpReq.readyState == 4) {
+            httpReq.onreadystatechange = function() 
+            {
+                if (httpReq.readyState == 4) 
+                {
                     var jsonObj = JSON.parse(httpReq.responseText);
                     document.getElementById("content").innerHTML = "&#128571;" + jsonObj.fact;
                     console.log(jsonObj);
