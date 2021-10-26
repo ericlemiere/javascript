@@ -18,7 +18,7 @@ http.createServer((req, res) => {
     else {
         res.writeHead(200, {'Content-Type': 'text/html'});
         res.write(`
-        <form action="fileupload" method="post" enctype="mutlipart/form-data">
+        <form action="fileupload" method="post" enctype="multipart/form-data">
             <input type="file" name="filetoupload"><br><br>
             <input type="submit">
         </form>
