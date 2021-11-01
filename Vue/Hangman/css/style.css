@@ -1,0 +1,107 @@
+/* 
+HANGMAN
+Table of Contents
+
+I. global element selectors
+II. helper classes applied by js
+III. the app
+    A. title bar / header
+    B. canvas
+    C. blank letters
+    D. keyboard
+    E. game-option buttons
+
+GLOBAL ELEMENT SELECTORS  */
+
+html, body {
+    align-items: center;
+    background-color: rgb(255, 244, 196);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Trirong', sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+button {
+    background-color: white;
+    border: none;
+    color: black;
+    box-shadow: 0 2px 5px rgb(119, 119, 119);
+    font-family: 'Trirong', sans-serif;
+    margin: 2px;
+}
+
+button:disabled {
+    color: rgb(230, 230, 230);
+}
+
+/* ================ helper classes ================= */
+.hidden { display: none; }
+.orange { background-color: #ffee00; }
+
+
+/* ================ the app ================= */
+#app {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+#board {
+    background-color: white;
+    box-shadow: 0 2px 5px rgb(119, 119, 119);
+    flex: 2 1 auto;
+    margin: 10px 0 0 0;
+    max-width: 700px;
+    width: 95%;
+}
+
+#word {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0 18px 0;
+}
+
+.word-blankletter {
+    align-items: flex-end;
+    background-color: #ffee00;
+    box-shadow: 0 2px 5px rgb(119, 119, 119);
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    margin: 0 2px 2px 2px;
+    width: 20px;
+}
+
+#keyboard {
+    align-items: center;
+    display: flex;
+    flex: 2 1 auto;
+    flex-direction: column;
+}
+
+.keyboard-row { display: flex; }
+
+.keyboard-row-letter {
+    height: 40px;
+    width: 28px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 5px 0;
+    max-width: 700px;
+    width: 95%;
+}
+
+.buttons-button {
+    height: 25px;
+    font-size: 1em;
+}
