@@ -1,0 +1,15 @@
+<div ng-app="test" ng-controller="testCtrl">
+  <h2 ng-bind="message"></h2>
+  <p>The heading above uses the ng-bind directive.</p>
+</div>
+
+
+
+
+
+<script>
+  var app = angular.module('test', []);
+  app.controller("testCtrl", function($scope) {
+    $scope.message = "Print this in the h2";
+  });
+</script>
