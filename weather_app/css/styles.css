@@ -70,7 +70,7 @@ div#wrapper {
 
 /* HEADER  */
 header {
-  background-color: #1a9835;
+  background-color: #1a7d98;
   padding: .5rem 0 .5rem 2%; }
 
 header h1, header h2 {
@@ -137,12 +137,14 @@ main {
     font-weight: 400;
     padding: 4%; }
   main #right {
-    margin-top: 2rem;
+    margin: 2rem 0;
     padding: 0 1rem; }
   main #right img {
     width: 25px; }
-  main #right div {
+  main .borderBottom {
     border-bottom: 1px solid rgba(31, 105, 190, 0.2);
+  }
+  main #right div {
     padding-top: .6rem;
     display: flex;
     display: -ms-flexbox;
@@ -167,7 +169,7 @@ footer {
   width: 100%;
   text-align: center;
   padding: 1em;
-  background-color: #1a9835;
+  background-color: #1a7d98;
   color: #fff;
   font-size: .9rem; }
 
@@ -191,4 +193,29 @@ div.keepOpen {
     clear: both;
     position: relative; } }
 
-/*# sourceMappingURL=styles.css.map */
+
+
+.zipCode {
+  display: flex;
+  padding: .5rem 0 0 0;
+}
+
+.zipCode h2 {
+  margin-right: .5rem;
+}
+
+.zipCode input {
+  text-align: right;
+  margin-right: .5rem;
+  width: 60px;
+}
+
+.zipCode input:focus {
+  outline: none;
+}
+
+
+.date {
+  width: 50%;
+  padding-bottom: .4rem;
+}

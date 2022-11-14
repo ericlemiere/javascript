@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>My Weather Channel</title>
+
+    <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging whena phone is turned sideways-->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <!-- *************** LOAD A GOOGLE FONT ****************** -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,400,700"
+      rel="stylesheet"
+    />
+
+    <!-- STYLE SHEETS -->
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <!-- removes the browser interface -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <meta name="apple-mobile-web-app-title" content="Weather" />
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body onload="getWeather(98632)">
+    <div id="wrapper">
+      <header>
+        <figure class="wu"><img src="images/weatherLogo.png" /></figure>
+        <h1>Open Weather Map API</h1>
+        <div class="zipCode">
+          <h2>Please enter your zip code:</h2>
+          <input id="zipInput" type="text" onfocus="this.value=''" value="" maxlength="5"/>
+          <button type="submit" onclick="getZip()">Enter</button>
+        </div>
+      </header>
+
+      <!-- page content here -->
+      <main>
+        <section id="left">
+          <div id="location">City</div>
+          <div id="weather">Current Conditions</div>
+          <div id="temperature">--</div>
+          <div id="desc">--</div>
+        </section>
+
+        <section id="right">
+          <div class="borderBottom">
+            <div class="date">
+				<p style="font-weight: bold;">5-Day Forecast</p>
+			</div>
+            <span id="r0c2" style="text-align: center;"><img /></span>
+            <span id="r0c3" style="font-weight: bold; text-align: center;">Low</span>
+            <span id="r0c4" style="font-weight: bold; text-align: center;">High</span>
+          </div>
+          <div class="borderBottom">
+			<div class="date">
+				<span id="r1c1"></span>
+				<span id="r1c5"></span>
+			</div>
+            <span style="text-align: center;"> <img id="r1c2" /></span>
+            <span id="r1c3" style="text-align: center;"></span>
+            <span id="r1c4" style="text-align: center;"></span>
+          </div>
+          <div class="borderBottom">
+            <div class="date">
+				<span id="r2c1"></span>
+				<span id="r2c5"></span>
+			</div>
+            <span style="text-align: center;"> <img id="r2c2" /></span>
+            <span id="r2c3" style="text-align: center;"></span>
+            <span id="r2c4" style="text-align: center;"></span>
+          </div>
+          <div class="borderBottom">
+            <div class="date">
+				<span id="r3c1"></span>
+				<span id="r3c5"></span>
+			</div>
+            <span style="text-align: center;"> <img id="r3c2" /></span>
+            <span id="r3c3" style="text-align: center;"></span>
+            <span id="r3c4" style="text-align: center;"></span>
+          </div>
+          <div class="borderBottom">
+            <div class="date">
+				<span id="r4c1"></span>
+				<span id="r4c5"></span>
+			</div>
+            <span style="text-align: center;"> <img id="r4c2" /></span>
+            <span id="r4c3" style="text-align: center;"></span>
+            <span id="r4c4" style="text-align: center;"></span>
+          </div>
+          <div class="borderBottom">
+            <div class="date">
+				<span id="r5c1"></span>
+				<span id="r5c5"></span>
+			</div>
+            <span style="text-align: center;"> <img id="r5c2" /></span>
+            <span id="r5c3" style="text-align: center;"></span>
+            <span id="r5c4" style="text-align: center;"></span>
+          </div>
+        </section>
+      </main>
+      <!-- end content -->
+
+      <footer>
+        <p>&bull; Practice Weather App &bull;</p>
+      </footer>
+    </div>
+    <!-- end wrapper -->
+  </body>
+  <script type="text/javascript" src="js/main.js"></script>
+</html>

@@ -25,10 +25,11 @@
 
         <table class="minefield">
             <tr ng-repeat="row in minefield.rows">
-                <td ng-repeat="spot in row.spots" oncontextmenu="return false" ng-mousedown="uncoverSpot(spot)">
+                <td ng-repeat="spot in row.spots" oncontextmenu="return false" (contextmenu)="onRightClick()" ng-mousedown="uncoverSpot(spot)">
                     <img ng-if="spot.isCovered" src="./images/covered.png" alt="">
                     <img ng-if="!spot.isCovered && spot.content == 'empty'" src="./images/empty.png" alt="">
                     <img ng-if="!spot.isCovered && spot.content == 'mine'" src="./images/mine.png">
+                    <!-- <img ng-if="!spot.isCovered && onRightClick" src="./images/flag-mine.png"> -->
                     <img ng-if="!spot.isCovered && spot.content == 1" src="./images/number-1.png">
                     <img ng-if="!spot.isCovered && spot.content == 2" src="./images/number-2.png">
                     <img ng-if="!spot.isCovered && spot.content == 3" src="./images/number-3.png">

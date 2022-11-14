@@ -133,6 +133,10 @@ const minesweeperController = function($scope) {
         $scope.minefield = createMinefield();
     }
 
+    $scope.onRightClick = function() {
+        return false;
+    }
+
     $scope.uncoverSpot = function(spot) {
         spot.isCovered = false;
 
